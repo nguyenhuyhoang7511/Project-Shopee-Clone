@@ -1,0 +1,147 @@
+.category__general {
+    position: relative;
+    background-color: $white-color;
+    margin-top: 28px;
+    &-content {
+        border-top: 1px solid rgba($black-color, 0.05);
+        overflow: hidden; 
+    }
+    &-product {
+        transition: all 0.4s ease;
+    }
+
+    &:hover .button__left-shopee-mall,
+    &:hover .button__right-shopee-mall{
+        width: 45px;
+        height: 45px;
+    }
+    &:hover .button__left-shopee-mall i,
+    &:hover .button__right-shopee-mall i{
+        font-size: 3rem;
+    }
+    
+}
+.category__voucher {
+    @include flexBetween;
+    width: 1200px;
+    &-left--heading {
+        margin: 16px;
+        @include flex;
+        &-main {
+          text-decoration: none;
+          padding-right: 4px;
+          & h3 {
+            font-size: 2.6rem;
+            font-weight: 400;
+            color: $main-color-mall;
+            text-transform: uppercase;
+          }
+        }
+        &-content {
+            @include flexAlign;
+            margin-left: 10px;
+            border-left: 1px solid $border-color;
+            padding-left: 4px;
+            &--first,
+            &--second,
+            &--third {
+               @include flexAlign;
+               padding: 0 10px;
+               & svg {
+                   color: $main-color-mall;
+                   fill: currentColor;
+               }
+               & p {
+                   font-size: 2.5rem;
+                   text-transform: capitalize;
+                   padding-left: 6px;
+               }
+            }
+        }
+    }
+    &-right--heading {
+        margin: 16px;
+        & a {
+            @include flex;
+            text-decoration: none;
+            & p {
+                font-size: 2.2rem;
+                line-height: 2.5rem;
+                color: $main-color-mall;
+                text-transform: capitalize;
+                margin-top: 1px;
+            }
+            & div {
+                position: relative;
+                width: 18px;
+                height: 18px;
+                background-color: $main-color-mall;
+                border-radius: 50%;
+                margin-left: 6px;
+                & i {
+                    position: absolute;
+                    font-size: 1.2rem;
+                    color: $white-color;
+                    @include positionCenter;
+                    margin-left: 1px;
+                }
+            }
+        }
+    }
+}
+
+
+.category__general-main {
+    width: 400px;
+    padding: 3px 22px 10px 22px;
+}
+
+.category__general-main--img {
+    width: 100%;
+    height: 462px;
+}
+
+.category__product {
+    position: relative;
+    &-first,
+    &-second {
+        flex-wrap: nowrap;
+        margin-top: 9px;
+        .category__product-hide--col {
+            transition: all 0.001s ease;
+        }
+    }
+   
+    & img {
+        width: 100%;
+    }
+    & p {
+        font-family: 'Helvetica Neue', Helvetica, Arial;
+        position: absolute;
+        width: 90%;
+        right: 14px;
+        bottom: 18px;
+        font-size: 2.7rem;
+        line-height: 3rem;
+        color: $main-color-mall;
+        text-align: center;
+        @include dsWebkit-box;
+        -webkit-line-clamp: 1;
+        word-wrap: break-word;
+    }
+}
+
+.button__left-shopee-mall,
+.button__right-shopee-mall {
+    z-index: 30;
+}
+
+.button__left-shopee-mall {
+    transform: translate(-50%, 25%);
+    left: 396px;
+}
+
+.button__right-shopee-mall {
+    transform: translate(50%, 25%);
+    
+}

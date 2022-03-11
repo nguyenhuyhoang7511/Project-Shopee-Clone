@@ -1,0 +1,58 @@
+//button click general
+.button__left,
+.button__right {
+        position: absolute;
+        @include btnStyle;
+        width: 28px;
+        height: 28px;
+        color: rgba($black-color, 0.54);
+        background-color: $white-color;
+        border-radius: 50%;
+        box-shadow: 0 1px 10px rgba($black-color, 0.12);
+        & i {
+            font-size: 2rem;
+            line-height: 2rem;
+            padding: 4px;
+        }
+}
+
+@mixin btnPosition {
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.button__left {
+    @include btnPosition;
+    left: 0;
+    visibility: hidden;
+}
+
+.button__right {
+    @include btnPosition;
+    right: 0;
+}
+
+
+
+//dots click slider
+.list__dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    @include fixUl;
+    display: flex;
+    justify-content: center;
+    &-item {
+        width: 10px;
+        height: 10px;
+        background-color: hsla(0,0%,100%,.4);
+        border: 1px solid hsla(0,0%,53.7%,.4);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    &-item + &-item {
+        margin-left: 8px;
+    }
+}

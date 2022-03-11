@@ -1,0 +1,152 @@
+.flash__sale-xtra {
+    position: relative;
+    background-color: $white-color;
+    margin-top: 30px;
+    &--content {
+        overflow: hidden;
+    }
+    &--heading {
+        padding: 16px;
+        & img {
+            width: 114px;
+            height: 30px;
+        }
+    }
+    &--list {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 13px;
+        transition: all 0.4s ease-out;
+        &-col {
+            padding-left: 14px;
+            padding-right: 14px;
+        }
+    }
+    &--link {
+        text-decoration: none;
+    }
+    &--product {
+        &-img--box {
+            position: relative;
+            &-first {
+                & img {                 
+                    width: 100%;  
+                }
+            }
+            &-second {
+                & img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                }
+            }
+        }
+        &-price {
+            font-family: 'Helvetica Neue', Helvetica, Arial;
+            font-size: 3.3rem;
+            font-weight: 500;
+            color: $main-color;
+            text-align: center;
+            padding: 10px 0;
+            & span {
+                font-family: 'roboto', 'sans-serif';
+                font-size: 1.6rem;
+                position: absolute;
+                transform: translate(-10px, 1px);
+            }
+            &--position {
+                visibility: hidden;
+            }
+        }
+
+        .products-sale {
+            width: 46px;
+            height: 42px;
+            top: -5px;
+            right: -8px;
+            cursor: pointer;
+            &::before {
+                border-width: 0 23px 4px;
+            }
+            &-value {
+                font-family: 'Helvetica Neue', Helvetica, Arial;
+                font-size: 2.5rem;
+                margin-top: 8px;
+            }
+            &-content {
+                font-family: 'roboto';
+                font-size: 2.4rem;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+        }
+
+        &-progress {
+            position: relative;
+            text-align: center;
+            padding-bottom: 12px;
+            & progress {
+                -webkit-appearance: none;
+                position: relative;
+                width: 90%;
+                height: 18px;
+                border-radius: 10px;
+                overflow: hidden;
+                &::-webkit-progress-bar {
+                background-color: #ffbda6;
+            }
+            &::-webkit-progress-value {
+                background-color: #ec2016;
+            }
+            }
+            & p {
+                position: absolute;
+                top: 5px;
+                bottom: 0;
+                color: $white-color;
+                font-size: 2rem;
+                width: 100%;
+                text-transform: uppercase;
+                text-shadow: rgba($black-color, 0.2) 4px 4px 4px;
+                z-index: 10;
+            }
+            & img {
+                position: absolute;
+                top: -14px;
+                left: 0;
+                z-index: 30;
+            }
+        }
+
+        //progress for product sale fire(Sắp cháy hàng)
+        &-progress--fire {
+            & progress {
+                -webkit-appearance: none;
+                &::-webkit-progress-value {
+                    background-color: #fa4521;
+                }
+            }
+        }
+    }
+
+    .button__left {
+        transform: translate(-50%, -50%);
+    }
+    
+    .button__right {
+        transform: translate(50%, -50%);
+    }
+
+    &:hover .button__left,
+    &:hover .button__right{
+        width: 45px;
+        height: 45px;
+        margin-top: 4px;
+    }
+    &:hover .button__left i,
+    &:hover .button__right i{
+        font-size: 3rem;
+}
+}
+

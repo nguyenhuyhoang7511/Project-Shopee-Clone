@@ -1,0 +1,120 @@
+.owl-carousel {
+    padding-left: 0;
+    &-item {
+        list-style: none;
+    }
+}
+
+@mixin btnSLider {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 60px;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    outline: none;
+}
+
+.owl-prev {
+    @include btnSlider; 
+    left: 0;
+    visibility: hidden;
+    & span {
+        font-size: 40px;
+        line-height: 20px;
+        color: #fff;
+    }
+}
+
+.owl-next {
+    @include btnSlider;
+    right: 0;
+    visibility: hidden;
+    &  span {
+        font-size: 40px;
+        line-height: 20px;
+        color: #fff;
+    }
+}
+
+.banner-slider:hover .owl-prev,
+.banner-slider:hover .owl-next {
+    visibility: initial;
+}
+
+
+.owl-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border: 1px solid rgba(137, 137, 137, 0.4) !important;
+    border-radius: 50%;
+    & + & {
+        margin-left: 10px;
+    }
+    &.active {
+        background-color: #ee4d2d !important;
+        border-color: #ee4d2d !important;
+    }
+}
+
+
+
+// .banner__slider {
+//     overflow: hidden;
+//     position: relative;
+//     &-list {
+//         @include fixUl;
+//         cursor: pointer;
+//         display: flex;
+//         width: 500%;
+//         transition: all 0.5s ease;
+//     }
+//     &-item {
+//         width: 100%;
+//         transition: all 0.1s ease;
+//         & img {
+//             width: 839px;
+//             height: 100%;
+//             border-radius: 2px
+//         }
+//     }
+//     &-prev--btn {
+//         @include btnSlider;
+//         left: 0;
+//         visibility: hidden;
+//         &::before {
+//            @include btnSliderBefore;
+//            left: 36%;
+//            border-color: transparent $white-color transparent transparent;
+//         }
+//     }
+//     &-next--btn {
+//         @include btnSlider;
+//         right: 0;
+//         visibility: hidden;
+//         &::before {
+//            @include btnSliderBefore;
+//            left: 66%;
+//            border-color: transparent transparent transparent $white-color;
+//         }
+//     }
+
+
+//     &:hover &-prev--btn,
+//     &:hover &-next--btn {
+//         visibility: initial;
+//     }
+// }
+
+// .active.list__dots-item {
+//     background-color: $main-color-second;
+//     border-color: $main-color-second;
+// }

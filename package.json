@@ -1,0 +1,25 @@
+{
+  "name": "shopee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass sass/container.scss assets/css/container.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AELONG2001/build-web-shoppe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AELONG2001/build-web-shoppe/issues"
+  },
+  "homepage": "https://github.com/AELONG2001/build-web-shoppe#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

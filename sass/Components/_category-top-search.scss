@@ -1,0 +1,96 @@
+.category__top-search {
+    position: relative;
+    background-color: $white-color;
+    margin-top: 28px;
+    &--content {
+
+        &:hover .button__left-top-search,
+        &:hover .button__right-top-search{
+            width: 45px;
+            height: 45px;
+        }
+        &:hover .button__left-top-search i,
+        &:hover .button__right-top-search i{
+            font-size: 3rem;
+        }
+        overflow: hidden;
+        &-heading {
+            @include flexBetween;
+            padding: 24px 16px 16px 16px;
+            & h4 {
+                font-family: 'roboto', sans-serif;
+                font-size: 2.5rem;
+                font-weight: 400;
+                color: $main-color-second;
+                text-transform: uppercase;
+            
+            }
+            & a {
+                font-size: 2.4rem;
+                color: $main-color-second;
+                text-transform: capitalize;
+                text-decoration: none;
+                & i {
+                    font-size: 2rem;
+                }
+            
+            }
+        }
+        &-main {
+            padding: 16px 10px 20px;
+            flex-wrap: nowrap;
+            border-top: 1px solid rgba($black-color, 0.05);
+            transition: all 0.2s ease-out;
+            & .col {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            &--link {
+                text-decoration: none;
+                &-product {
+                    position: relative;
+                    & img {
+                        width: 100%;
+                    }
+                    &--amount {
+                        width: 100%;
+                        background-color: rgba($black-color, 0.26);
+                        & p {
+                            font-size: 2rem;
+                            color: $white-color;
+                            padding: 4px;
+                            text-align: center;
+                        }
+                    }
+                    & div {
+                        font-family: 'Helvetica Neue', Helvetica, Arial;
+                        font-size: 2.7rem;
+                        line-height: 3.6rem;
+                        color: #555;
+                        text-transform: capitalize;
+                        margin-top: 8px;
+                        text-align: center;
+                        @include dsWebkit-box;
+                    }
+                    & .label-top {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 32px;
+                        height: 40px;
+                        z-index: 10;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button__left-top-search {
+    transform: translate(-50%, -50%);
+}
+
+.button__right-top-search {
+    transform: translate(50%, -50%);
+    
+}

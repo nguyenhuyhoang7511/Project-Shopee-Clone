@@ -1,0 +1,70 @@
+@mixin btnStyle() {
+    outline: none;
+    border: none;
+}
+
+@mixin btnSlider() {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: translateY(-50%);
+    @include btnStyle;
+    border-radius: 4px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+@mixin btnSliderBefore() {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-width: 14px 10px;
+    border-style: solid;
+}
+
+@mixin fixUl() {
+    list-style: none;
+    padding-left: 0;
+}
+
+@mixin flex() {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween() {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    justify-content: space-between;
+}
+
+@mixin flexAlign() {
+    display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -moz-box;
+    align-items: center;
+}
+
+@mixin dsWebkit-box {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+
+@mixin positionCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
